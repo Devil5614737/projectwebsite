@@ -18,6 +18,10 @@ html {
   font-family: 'Poppins','sans-serif';
 }
 
+a {
+  color: white;
+}
+
 .header {
   width: 100vw;
   height: 100vh;
@@ -299,9 +303,9 @@ html {
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2px;
 }
 
@@ -364,15 +368,16 @@ html {
   }
 }
 
-.projects-section .project-container .project .project-info .links-container .link p {
+.projects-section .project-container .project .project-info .links-container .link a {
   font-size: 1.7rem;
+  color: #878787;
 }
 
 @media screen and (max-width: 743px) {
-  .projects-section .project-container .project .project-info .links-container .link p {
+  .projects-section .project-container .project .project-info .links-container .link a {
     font-size: 1.3rem;
   }
-  .projects-section .project-container .project .project-info .links-container .link p:hover {
+  .projects-section .project-container .project .project-info .links-container .link a:hover {
     text-decoration: underline;
   }
 }
@@ -402,6 +407,7 @@ html {
 
 #icon {
   height: 15px;
+  color: #878787;
 }
 
 .contacts {

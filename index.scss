@@ -214,7 +214,8 @@
         }
         }
         .tag-container {
-          @include flex(unset, unset);
+          
+          @include flex(center, unset);
           margin-top: 2px;
           @media screen and (max-width:743px) {
          max-lines: 12px;
@@ -246,8 +247,10 @@
                 margin-left: 42px;
                 margin-top: 0px;
                   }
-            p {
+            a {
               font-size: 1.7rem;
+          color: #878787;
+
               @media screen and (max-width:743px) {
             font-size:1.3rem ;
             &:hover{
@@ -288,6 +291,7 @@
 }
 #icon {
   height: 15px;
+  color:#878787;
 }
 
 .contacts {
