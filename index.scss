@@ -1,0 +1,375 @@
+@import "./reset";
+
+@mixin flex($justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #000000 50%,
+      #000000 50%,
+      rgba(30, 30, 30, 0) 97.96%
+    );
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0.1em 3em;
+  position: relative;
+  z-index: 2;
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width:743px) {
+        padding: 0.1em 1em;
+       
+          }
+    @include flex(space-between, center);
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 2rem;
+      @media screen and (max-width:743px) {
+        font-size: 1.5rem;
+       padding-left: 1em;
+          }
+    }
+    .links {
+      ul {
+        @include flex(space-between, center);
+        li {
+          margin-right: 12px;
+          margin-left: 62px;
+          @media screen and (max-width:743px) {
+            margin-right: 2px;
+            margin-left: 12px;
+           
+              }
+          &:nth-of-type(3) {
+            padding: 0.3em 1em;
+            background: linear-gradient(
+              105.19deg,
+              #4b2778 39.32%,
+              #3e0eff 100%
+              
+              
+            );
+           
+            
+          }
+          a {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 500;
+            @media screen and (max-width:743px) {
+                font-size: 1.2rem;
+               
+                  }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0.1em 3em;
+  position: relative;
+  z-index: 2;
+//   margin-left: 122px;
+//   margin-top: 82px;
+  .title {
+    margin-bottom: 6px;
+   
+    h2 {
+      color: white;
+      font-weight: 900;
+      font-size: 4.5rem;
+      word-spacing: 3px;
+      line-height: 1.3;
+         @media screen and (max-width:743px) {
+                font-size: 3.3rem;
+               
+                  }
+    }
+  }
+  .sub-title {
+    p {
+      color: #707070;
+      font-size: 2rem;
+      @media screen and (max-width:743px) {
+        font-size: 1.5rem;
+       
+          }
+    }
+  }
+  .email-container {
+    background: white;
+    width: 400px;
+    @include flex(space-between, center);
+    padding-left: 1em;
+    height: 50px;
+    border-radius: 40px;
+    margin-top: 22px;
+    #icon {
+      height: 30px;
+    }
+    input {
+      height: 50px;
+      border: none;
+      font-size: 1.5rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn {
+      border-radius: 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(117.37deg, #4b2778 32.95%, #3e0eff 130.07%);
+      padding: 0.57em 2em;
+      color: white;
+    }
+  }
+}
+
+.projects-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0.1em 3em;
+  z-index: 3;
+
+  .title-container {
+    .title {
+      color: white;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    .bar {
+      background: linear-gradient(90.29deg, #3e0eff 43.72%, #ff0000 109.38%);
+      height: 12px;
+      width: 60px;
+      border-radius: 40px;
+    }
+  }
+  .project-container {
+    margin-top: 72px;
+    color: white;
+
+    .project {
+      @include flex(unset, unset);
+      background: #0f0e0e;
+      height: 240px;
+      width: 90%;
+      border-radius: 13px;
+      padding: 3em 7em;
+      position: relative;
+      margin-bottom: 42px;
+      @media screen and (max-width:743px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 240px;
+          width: 90%;
+          
+      }
+      img {
+        width: 286px;
+        height: 176px;
+        object-fit: cover;
+        @media screen and (max-width:743px) {
+            width: 186px;
+        height: 126px;
+        margin-bottom: 12px;
+        }
+      }
+      .project-info {
+        margin-left: 22px;
+        .title {
+          font-weight: 500;
+          font-size: 2.5rem;
+          text-transform: capitalize;
+          @media screen and (max-width:743px) {
+      text-align: center;
+      font-size: 2rem;
+        }
+        }
+        .tag-container {
+          @include flex(unset, unset);
+          margin-top: 2px;
+          @media screen and (max-width:743px) {
+         max-lines: 12px;
+              }
+          .tag {
+            font-size: 1.6rem;
+            padding: 0.2em 0.6em;
+            margin-right: 12px;
+            background: #1f1f1f;
+            @media screen and (max-width:743px) {
+                font-size: .9rem;
+                padding: 0.2em 0.6em;
+                margin-right: 12px;
+                background: unset;
+                margin-bottom: 10px;
+                  }
+          }
+        }
+        .links-container {
+          @include flex(unset, unset);
+          .link {
+            margin-right: 22px;
+            margin-top: 80px;
+            @include flex(space-between, center);
+            cursor: pointer;
+            width: 70px;
+            @media screen and (max-width:743px) {
+                margin-right: 2px;
+                margin-left: 42px;
+                margin-top: 0px;
+                  }
+            p {
+              font-size: 1.7rem;
+              @media screen and (max-width:743px) {
+            font-size:1.3rem ;
+            &:hover{
+
+                text-decoration: underline;
+            }
+                  }
+            }
+            img{
+                @media screen and (max-width:743px) {
+                   
+                    display: none;
+                          }
+            }
+          }
+        }
+      }
+      .line {
+        background-color: red;
+        height: 180px;
+        width: 20px;
+        position: absolute;
+        left: 0;
+        transform: translateX(-8px);
+
+        background: linear-gradient(
+          179.83deg,
+          #f33f3f 0.15%,
+          rgba(34, 7, 200, 0) 196.31%
+        );
+        @media screen and (max-width:743px) {
+                   
+            display: none;
+                  }
+      }
+    }
+  }
+}
+#icon {
+  height: 15px;
+}
+
+.contacts {
+  // margin-left: 122px;
+
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0.1em 3em;
+  .title-container {
+    .bar {
+      background: linear-gradient(90.29deg, #3e0eff 43.72%, #ff0000 109.38%);
+      height: 12px;
+      width: 60px;
+      border-radius: 40px;
+    }
+    .title {
+      color: white;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    p {
+      color: #808080;
+      font-size: 1.5rem;
+    }
+  }
+  .input-container {
+    margin-top: 52px;
+    label {
+      color: white;
+      font-size: 1.6rem;
+    }
+    input {
+      margin-top: 7px;
+      display: block;
+      width: 40%;
+      height: 50px;
+      margin-bottom: 12px;
+      background: #151515;
+      border: none;
+      color: white;
+      font-size: 1.7rem;
+      padding-left: 0.3em;
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea {
+      display: block;
+      width: 60%;
+      height: 200px;
+      resize: none;
+      font-family: "Poppins",sans-serif;
+      margin-top: 7px;
+      background: #151515;
+      border: none;
+      color: white;
+      font-size: 1.7rem;
+      padding-left: 0.3em;
+      padding-top: 0.2em;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.container {
+  width: 60%;
+  position: relative;
+  margin-top: 12px;
+  .btn {
+      @include flex(unset,center );
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    cursor: pointer;
+    background-color: #3E0EFF;
+    color: white;
+    border: none;
+    img{
+    height: 20px;
+    }
+  }
+}
