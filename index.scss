@@ -12,6 +12,9 @@
   background: url("./assets/background.jpg");
   background-size: cover;
   background-position: center;
+  @media screen and (max-width:550px) {
+    background: unset;
+  }
   &::before {
     content: "";
     position: absolute;

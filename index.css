@@ -30,6 +30,12 @@ a {
   background-position: center;
 }
 
+@media screen and (max-width: 550px) {
+  .header {
+    background: unset;
+  }
+}
+
 .header::before {
   content: "";
   position: absolute;
