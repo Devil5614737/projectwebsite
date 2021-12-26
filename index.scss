@@ -29,7 +29,8 @@
   }
   .nav-container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0px auto;
+    transform: translateY(12px);
     padding: 0.1em 3em;
   position: relative;
   z-index: 2;
@@ -89,7 +90,7 @@
 
 .header-content {
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 130px auto;
     padding: 0.1em 3em;
   position: relative;
   z-index: 2;
